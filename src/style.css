@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#html {
+    word-break: break-all;
+}
+#div1 {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+#div1::before {
+    content: "";
+    position: absolute;
+    display: block;
+
+}
+#div1::after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+@media screen and (max-width: 1189px) {
+    #html {
+        height: 50vh;
+        overflow: auto;
+        //文字内容上半屏幕
+    }
+    #div1Wrapper {
+        height: 50vh;
+        //八卦图下半屏幕
+    }
+    #div1 {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
